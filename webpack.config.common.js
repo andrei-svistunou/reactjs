@@ -2,7 +2,7 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config = {
-  context: path.resolve(__dirname, 'src'),
+  context: path.join(__dirname, 'src'),
   module: {
     rules: [
       {
