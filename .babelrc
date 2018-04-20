@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "stage-2",
+    [ "env",
+      {
+        "modules": "commonjs"
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-runtime"
+  ]
+} 
