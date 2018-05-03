@@ -1,0 +1,58 @@
+.film__item {
+  display: flex;
+  margin-top: 30px;
+}
+
+.film__poster {
+  width: 30%;
+}
+
+.film__info {
+  width: 70%;
+  padding-left: 40px;
+}
+
+.film__img {
+  width: 100%;
+}
+
+.film-title {
+  color: #fc7e8d;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.film__rating {
+  color: yellowgreen;
+  border: 1px solid yellowgreen; 
+  border-radius: 50%;
+  padding: 7px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.film__tagline,
+.film__year,
+.film__duration,
+.film__description {
+  color: #fff;
+}
+
+.film__duration {
+  margin-left: 20px;
+}
+
+.film__year,
+.film__duration {
+  font-weight: 600;
+}
+
+.row {
+  padding: 10px 0;
+}
+
+.film__tagline,
+.film__description {
+  opacity: .7;
+}

@@ -1,0 +1,42 @@
+li {
+  list-style-type: none;
+}
+
+.video__item {
+  display: block;
+  width: 33.33%;
+  padding: 20px;
+}
+
+.video__item a {
+  display: block;
+}
+
+.video-info.flex {
+  align-items: flex-start;
+  padding-top: 7px;
+}
+
+.video-title,
+.video-release {
+  font-size: 14px;
+}
+
+.video-title {
+  padding-top: 2px;
+  padding-bottom: 7px;
+}
+
+.video-genre {
+  font-size: 12px;
+}
+
+.video-release {
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding: 2px 5px;
+}
+
+.video-img {
+  width: 100%;
+}

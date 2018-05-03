@@ -1,0 +1,4 @@
+.video__list.flex {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}

@@ -1,0 +1,16 @@
+.search__label {
+  color: #fff;
+  display: block;
+  padding: 15px 0;
+}
+
+.search__field {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #cf626f;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
