@@ -1,0 +1,24 @@
+.btn {
+  color: #fff;
+  padding: 7px 50px;
+  border: none;
+  border-radius: 2px;
+}
+
+.btn-primary {
+  background-color: #f55263;
+}
+
+.btn--secondary {
+  background-color: #444;
+}
+
+.btn--small {
+  padding: 5px 20px;
+  font-size: 12px;
+}
+
+.btn-invert {
+  background: #fff;
+  color: #f55263;
+}
