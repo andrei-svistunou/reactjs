@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> should render <Logo /> with props 1`] = `
+<a>
+  <span
+    className="main-logo__text"
+  >
+    test
+  </span>
+</a>
+`;
+
+exports[`<Logo /> should render <Logo /> without props 1`] = `
+<a>
+  <span
+    className="main-logo__text"
+  >
+    netflixroulett
+  </span>
+</a>
+`;

@@ -8,8 +8,12 @@ const Button = props => (
 
 Button.propTypes = {
   value: PropTypes.string.isRequired,
-  classes: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  classes: PropTypes.string,
+  onClick: PropTypes.func.isRequired
+};
+
+Button.defaultProps = {
+  classes: '',
 };
 
 export default Button;

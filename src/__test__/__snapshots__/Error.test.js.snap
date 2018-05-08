@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Error /> should catch errors with componentDidCatch 1`] = `
+<Error>
+  <div>
+    <h2>
+      Error...
+    </h2>
+    <p>
+      [object Object]
+    </p>
+    <div>
+      Component Stack Error Details: 
+    </div>
+    <p>
+      
+    in ProblemChild
+    in Error (created by WrapperComponent)
+    in WrapperComponent
+    </p>
+  </div>
+</Error>
+`;

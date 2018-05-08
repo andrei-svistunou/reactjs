@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFound /> should render <Label /> with props 1`] = `
+<h2
+  className="h2"
+>
+  NotFound text
+</h2>
+`;

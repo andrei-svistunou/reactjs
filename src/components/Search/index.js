@@ -54,7 +54,7 @@ class Search extends Component {
           onChange={this.onChangeInput}/>
         <div className="flex">
           <Filter label="Search by" selectFilter={this.onSearchBy} filters={searchFilters}/>
-          <Button value="Search" classes="btn-primary upper"
+          <Button value="Search" classes="btn-primary upper main-search"
             onClick={() => this.props.clickHandler({
               searchBy: searchBy.name,
               search: searchFieldValue
@@ -67,7 +67,7 @@ class Search extends Component {
 
 Search.propTypes = {
   id: PropTypes.string.isRequired,
-  clickHandler: PropTypes.func
+  clickHandler: PropTypes.func.isRequired
 };
 
 export default Search;
