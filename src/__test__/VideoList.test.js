@@ -15,7 +15,7 @@ describe('<VideoList />', () => {
     chooseFilm: jest.fn()
   };
 
-  test('should render <VideoList /> without children', () => {
+  test('should render <VideoList />', () => {
     const videoList = mount(<VideoList {...Props}/>);
 
     expect(videoList.contains(VideoItem)).toBe(true);

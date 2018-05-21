@@ -23,15 +23,13 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-    "collectCoverage": true,
     "coverageReporters": [
       "json",
       "text",
       "html"
     ],
     "collectCoverageFrom": [
-      "src/components/**/*.js",
-      "!src/components/Task_1/*.js"
+      "src/components/**/*.js"
     ],
     "moduleNameMapper": {
       "\\.(css|scss)$": "identity-obj-proxy"
