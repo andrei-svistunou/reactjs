@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VideoList /> should render <VideoList /> without children 1`] = `
+<VideoList
+  chooseFilm={[MockFunction]}
+  videoList={
+    Array [
+      Object {
+        "genres": Array [
+          "Drama",
+          "Adventure",
+        ],
+        "id": 3,
+        "poster_path": "https://path.com/poster/2",
+        "release_date": "1990-23-02",
+        "title": "Video list",
+      },
+    ]
+  }
+>
+  <ul
+    className="video__list flex"
+  >
+    <VideoItem
+      chooseFilm={[Function]}
+      genre="Drama&Adventure"
+      id={3}
+      key="3"
+      poster="https://path.com/poster/2"
+      releaseDate="1990"
+      title="Video list"
+    >
+      <li
+        className="video__item"
+        onClick={[Function]}
+      >
+        <img
+          className="video-img"
+          src="https://path.com/poster/2"
+        />
+        <div
+          className="video-info flex"
+        >
+          <div>
+            <h4
+              className="video-title"
+            >
+              Video list
+            </h4>
+            <p
+              className="video-genre"
+            >
+              Drama&Adventure
+            </p>
+          </div>
+          <span
+            className="video-release"
+          >
+            1990
+          </span>
+        </div>
+      </li>
+    </VideoItem>
+  </ul>
+</VideoList>
+`;

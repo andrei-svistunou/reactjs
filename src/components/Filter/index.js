@@ -19,7 +19,7 @@ const Filter = (props) => {
 Filter.propTypes = {
   filters: PropTypes.arrayOf(PropTypes.shape).isRequired,
   label: PropTypes.string.isRequired,
-  selectFilter: PropTypes.func
+  selectFilter: PropTypes.func.isRequired
 };
 
 export default Filter;

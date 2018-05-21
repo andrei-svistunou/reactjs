@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilmCard /> should render a FilmCard 1`] = `
+<section
+  className="film__item"
+>
+  <div
+    className="film__poster"
+  >
+    <img
+      className="film__img"
+      src="https://google.com/img/3"
+    />
+  </div>
+  <div
+    className="film__info"
+  >
+    <h3
+      className="film-title"
+    >
+      Best film
+      <span
+        className="film__rating"
+      >
+        8
+      </span>
+    </h3>
+    <p
+      className="row film__tagline"
+    />
+    <p
+      className="row"
+    >
+      <span
+        className="film__year"
+      >
+        1982
+      </span>
+      <span
+        className="film__duration"
+      >
+         min
+      </span>
+    </p>
+    <p
+      className="row film__description"
+    />
+  </div>
+</section>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubHeader /> Shapshot should render <SubHeader /> with children 1`] = `
+<div
+  className="flex"
+>
+  <Logo
+    text="netflixroulett"
+  />
+  <p>
+    test children
+  </p>
+</div>
+`;
+
+exports[`<SubHeader /> Shapshot should render <SubHeader /> without children 1`] = `
+<div
+  className="flex"
+>
+  <Logo
+    text="netflixroulett"
+  />
+</div>
+`;

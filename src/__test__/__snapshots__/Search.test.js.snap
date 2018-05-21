@@ -1,0 +1,428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should provide onchange handler 1`] = `
+<Search
+  clickHandler={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "search": "",
+            "searchBy": "title",
+          },
+        ],
+        Array [
+          Object {
+            "search": "",
+            "searchBy": "title",
+          },
+        ],
+      ],
+    }
+  }
+  id="id"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      className="search__label upper-text"
+      htmlFor="id"
+    >
+      Find your movie
+    </label>
+    <input
+      className="search__field"
+      id="id"
+      onChange={[Function]}
+      placeholder="Enter film or author"
+      type="text"
+      value=""
+    />
+    <div
+      className="flex"
+    >
+      <Filter
+        filters={
+          Array [
+            Object {
+              "active": true,
+              "name": "title",
+              "value": "title",
+            },
+            Object {
+              "active": false,
+              "name": "genres",
+              "value": "genre",
+            },
+          ]
+        }
+        label="Search by"
+        selectFilter={[Function]}
+      >
+        <div>
+          <span
+            className="filter__label upper-text "
+          >
+            Search by
+          </span>
+          <Button
+            classes="btn--small btn-primary left-space-10"
+            key="title"
+            onClick={[Function]}
+            value="title"
+          >
+            <input
+              className="btn btn--small btn-primary left-space-10 upper-text"
+              onClick={[Function]}
+              type="button"
+              value="title"
+            />
+          </Button>
+          <Button
+            classes="btn--small btn--secondary left-space-10"
+            key="genre"
+            onClick={[Function]}
+            value="genre"
+          >
+            <input
+              className="btn btn--small btn--secondary left-space-10 upper-text"
+              onClick={[Function]}
+              type="button"
+              value="genre"
+            />
+          </Button>
+        </div>
+      </Filter>
+      <Button
+        classes="btn-primary upper main-search"
+        onClick={[Function]}
+        value="Search"
+      >
+        <input
+          className="btn btn-primary upper main-search upper-text"
+          onClick={[Function]}
+          type="button"
+          value="Search"
+        />
+      </Button>
+    </div>
+  </form>
+</Search>
+`;
+
+exports[`<Search /> should provide onchange handler 2`] = `
+<Search
+  clickHandler={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "search": "",
+            "searchBy": "title",
+          },
+        ],
+        Array [
+          Object {
+            "search": "",
+            "searchBy": "title",
+          },
+        ],
+      ],
+    }
+  }
+  id="id"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      className="search__label upper-text"
+      htmlFor="id"
+    >
+      Find your movie
+    </label>
+    <input
+      className="search__field"
+      id="id"
+      onChange={[Function]}
+      placeholder="Enter film or author"
+      type="text"
+      value=""
+    />
+    <div
+      className="flex"
+    >
+      <Filter
+        filters={
+          Array [
+            Object {
+              "active": true,
+              "name": "title",
+              "value": "title",
+            },
+            Object {
+              "active": false,
+              "name": "genres",
+              "value": "genre",
+            },
+          ]
+        }
+        label="Search by"
+        selectFilter={[Function]}
+      >
+        <div>
+          <span
+            className="filter__label upper-text "
+          >
+            Search by
+          </span>
+          <Button
+            classes="btn--small btn-primary left-space-10"
+            key="title"
+            onClick={[Function]}
+            value="title"
+          >
+            <input
+              className="btn btn--small btn-primary left-space-10 upper-text"
+              onClick={[Function]}
+              type="button"
+              value="title"
+            />
+          </Button>
+          <Button
+            classes="btn--small btn--secondary left-space-10"
+            key="genre"
+            onClick={[Function]}
+            value="genre"
+          >
+            <input
+              className="btn btn--small btn--secondary left-space-10 upper-text"
+              onClick={[Function]}
+              type="button"
+              value="genre"
+            />
+          </Button>
+        </div>
+      </Filter>
+      <Button
+        classes="btn-primary upper main-search"
+        onClick={[Function]}
+        value="Search"
+      >
+        <input
+          className="btn btn-primary upper main-search upper-text"
+          onClick={[Function]}
+          type="button"
+          value="Search"
+        />
+      </Button>
+    </div>
+  </form>
+</Search>
+`;
+
+exports[`<Search /> should render <Search /> 1`] = `
+<Search
+  clickHandler={[MockFunction]}
+  id="id"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      className="search__label upper-text"
+      htmlFor="id"
+    >
+      Find your movie
+    </label>
+    <input
+      className="search__field"
+      id="id"
+      onChange={[Function]}
+      placeholder="Enter film or author"
+      type="text"
+      value=""
+    />
+    <div
+      className="flex"
+    >
+      <Filter
+        filters={
+          Array [
+            Object {
+              "active": true,
+              "name": "title",
+              "value": "title",
+            },
+            Object {
+              "active": false,
+              "name": "genres",
+              "value": "genre",
+            },
+          ]
+        }
+        label="Search by"
+        selectFilter={[Function]}
+      >
+        <div>
+          <span
+            className="filter__label upper-text "
+          >
+            Search by
+          </span>
+          <Button
+            classes="btn--small btn-primary left-space-10"
+            key="title"
+            onClick={[Function]}
+            value="title"
+          >
+            <input
+              className="btn btn--small btn-primary left-space-10 upper-text"
+              onClick={[Function]}
+              type="button"
+              value="title"
+            />
+          </Button>
+          <Button
+            classes="btn--small btn--secondary left-space-10"
+            key="genre"
+            onClick={[Function]}
+            value="genre"
+          >
+            <input
+              className="btn btn--small btn--secondary left-space-10 upper-text"
+              onClick={[Function]}
+              type="button"
+              value="genre"
+            />
+          </Button>
+        </div>
+      </Filter>
+      <Button
+        classes="btn-primary upper main-search"
+        onClick={[Function]}
+        value="Search"
+      >
+        <input
+          className="btn btn-primary upper main-search upper-text"
+          onClick={[Function]}
+          type="button"
+          value="Search"
+        />
+      </Button>
+    </div>
+  </form>
+</Search>
+`;
+
+exports[`<Search /> should submit search 1`] = `
+<Search
+  clickHandler={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "search": "",
+            "searchBy": "title",
+          },
+        ],
+        Array [
+          Object {
+            "search": "",
+            "searchBy": "title",
+          },
+        ],
+      ],
+    }
+  }
+  id="id"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      className="search__label upper-text"
+      htmlFor="id"
+    >
+      Find your movie
+    </label>
+    <input
+      className="search__field"
+      id="id"
+      onChange={[Function]}
+      placeholder="Enter film or author"
+      type="text"
+      value=""
+    />
+    <div
+      className="flex"
+    >
+      <Filter
+        filters={
+          Array [
+            Object {
+              "active": true,
+              "name": "title",
+              "value": "title",
+            },
+            Object {
+              "active": false,
+              "name": "genres",
+              "value": "genre",
+            },
+          ]
+        }
+        label="Search by"
+        selectFilter={[Function]}
+      >
+        <div>
+          <span
+            className="filter__label upper-text "
+          >
+            Search by
+          </span>
+          <Button
+            classes="btn--small btn-primary left-space-10"
+            key="title"
+            onClick={[Function]}
+            value="title"
+          >
+            <input
+              className="btn btn--small btn-primary left-space-10 upper-text"
+              onClick={[Function]}
+              type="button"
+              value="title"
+            />
+          </Button>
+          <Button
+            classes="btn--small btn--secondary left-space-10"
+            key="genre"
+            onClick={[Function]}
+            value="genre"
+          >
+            <input
+              className="btn btn--small btn--secondary left-space-10 upper-text"
+              onClick={[Function]}
+              type="button"
+              value="genre"
+            />
+          </Button>
+        </div>
+      </Filter>
+      <Button
+        classes="btn-primary upper main-search"
+        onClick={[Function]}
+        value="Search"
+      >
+        <input
+          className="btn btn-primary upper main-search upper-text"
+          onClick={[Function]}
+          type="button"
+          value="Search"
+        />
+      </Button>
+    </div>
+  </form>
+</Search>
+`;

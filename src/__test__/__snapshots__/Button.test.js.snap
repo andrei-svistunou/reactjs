@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should be get prop value 1`] = `
+<input
+  className="btn btn--primary upper-text"
+  onClick={[MockFunction]}
+  type="button"
+  value="Jest"
+/>
+`;
+
+exports[`<Button /> should render a button primary 1`] = `
+<input
+  className="btn btn--primary upper-text"
+  onClick={[MockFunction]}
+  type="button"
+  value="Click"
+/>
+`;

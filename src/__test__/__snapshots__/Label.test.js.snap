@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Label /> should render <Label /> with props 1`] = `
+<span
+  className="label"
+>
+  test label
+</span>
+`;
