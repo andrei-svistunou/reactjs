@@ -1,34 +1,25 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Button from '../Button';
 import Filter from '../Filter';
+import searchFilter from '../../redux/actions/searchFilter';
 import './index.css';
 
 class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchFilters: [
-        { name: 'title', value: 'title', active: true },
-        { name: 'genres', value: 'genre', active: false }],
       searchFieldValue: '',
-      searchBy: { name: 'title', value: 'title', active: true }
     };
-    this.onSearchBy = this.onSearchBy.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onChangeInput = this.onChangeInput.bind(this);
   }
 
-  onSearchBy(filter) {
-    this.setState({
-      searchBy: filter,
-      searchFilters: this.state.searchFilters.map((item) => {
-        if (item === filter) {
-          return { ...item, active: true };
-        }
-        return { ...item, active: false };
-      })
-    });
+  static propTypes = {
+    searchFilter: PropTypes.func.isRequired,
+    searchingFilters: PropTypes.array.isRequired,
   }
 
   onChangeInput(e) {
@@ -45,7 +36,9 @@ class Search extends Component {
   }
 
   render() {
-    const { searchFieldValue, searchBy, searchFilters } = this.state;
+    const { searchFieldValue } = this.state;
+    const { searchingFilters, searchFilter } = this.props;
+
     return (
       <form onSubmit={this.onSubmit}>
         <label className="search__label upper-text" htmlFor={this.props.id}>Find your movie</label>
@@ -53,10 +46,10 @@ class Search extends Component {
           value={ searchFieldValue} placeholder="Enter film or author"
           onChange={this.onChangeInput}/>
         <div className="flex">
-          <Filter label="Search by" selectFilter={this.onSearchBy} filters={searchFilters}/>
+          <Filter label="Search by" selectFilter={searchFilter} filters={searchingFilters}/>
           <Button value="Search" classes="btn-primary upper main-search"
             onClick={() => this.props.clickHandler({
-              searchBy: searchBy.name,
+              searchBy: searchingFilters.find(filter => filter.active).name,
               search: searchFieldValue
             })}/>
         </div>
@@ -70,4 +63,10 @@ Search.propTypes = {
   clickHandler: PropTypes.func.isRequired
 };
 
-export default Search;
+const mapStateToProps = state => state.films;
+const mapDispatchToProps = (dispatch) => {
+  const actions = bindActionCreators({ searchFilter }, dispatch);
+  return { ...actions };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

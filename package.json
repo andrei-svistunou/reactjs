@@ -1,6 +1,6 @@
 {
   "name": "reactjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "mentoring",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,9 @@
       "html"
     ],
     "collectCoverageFrom": [
-      "src/components/**/*.js"
+      "src/components/**/*.js",
+      "src/redux/actions/*.js",
+      "src/redux/reducers/*.js"
     ],
     "moduleNameMapper": {
       "\\.(css|scss)$": "identity-obj-proxy"
@@ -92,6 +94,7 @@
     "react-dom": "16.3.1",
     "react-redux": "5.0.7",
     "react-router": "4.2.0",
-    "redux": "3.7.2"
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0"
   }
 }

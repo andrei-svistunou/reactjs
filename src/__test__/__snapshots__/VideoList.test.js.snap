@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<VideoList /> should render <VideoList /> without children 1`] = `
+exports[`<VideoList /> should render <VideoList /> 1`] = `
 <VideoList
   chooseFilm={[MockFunction]}
   videoList={

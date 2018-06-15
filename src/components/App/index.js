@@ -1,95 +1,69 @@
 import React, { Component, Fragment } from 'react';
-import axios from 'axios';
+import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Footer from '../Footer';
 import Header from '../Header';
 import Logo from '../Logo';
 import Search from '../Search';
 import NotFound from '../NotFound';
-import VideoList from '../VideoList';
 import Label from '../Label';
 import Filter from '../Filter';
+import VideoList from '../VideoList';
 import FilmCard from '../FilmCard';
+import searchMovies from '../../redux/actions/searchMovies';
+import orderFilter from '../../redux/actions/filterMovies';
+import getMovie from '../../redux/actions/getMovie';
+import unselectFilm from '../../redux/actions/unselectFilm';
 
 import './index.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      videoList: [],
-      orderFilters: [{ value: 'release date', name: 'release_date' }, { value: 'rating', name: 'rating' }],
-      totalMovies: null,
-      selectedFilm: null
-    };
-    this.searchHandler = this.searchHandler.bind(this);
-    this.chooseFilm = this.chooseFilm.bind(this);
-    this.setDefaultState = this.setDefaultState.bind(this);
-  }
-
-  searchMovies(params) {
-    return axios.get('http://react-cdp-api.herokuapp.com/movies', {
-      params
-    });
-  }
-
-  getMovie(id) {
-    return axios.get(`http://react-cdp-api.herokuapp.com/movies/${id}`);
-  }
-
-  setDefaultState() {
-    this.setState({
-      totalMovies: null,
-      selectedFilm: null,
-      videoList: []
-    });
-  }
-
-  searchHandler(params) {
-    this.searchMovies(params)
-      .then(res => this.setState({
-        videoList: res.data.data,
-        totalMovies: res.data.total
-      }))
-      .catch(err => console.log(err));
-  }
-
-  chooseFilm(id) {
-    this.getMovie(id)
-      .then(res => this.setState({
-        selectedFilm: res.data
-      }))
-      .catch(err => console.log(err));
+  static propTypes = {
+    searchMovies: PropTypes.func.isRequired,
+    getMovie: PropTypes.func.isRequired,
+    orderFilter: PropTypes.func.isRequired,
+    unselectFilm: PropTypes.func.isRequired,
+    selectedFilm: PropTypes.object,
+    moviesList: PropTypes.array.isRequired,
+    orderFilters: PropTypes.array.isRequired,
+    total: PropTypes.number,
+    dispatch: PropTypes.func
   }
 
   render() {
     const {
-      videoList,
+      moviesList,
+      total: totalMovies,
       orderFilters,
-      totalMovies,
-      selectedFilm
-    } = this.state;
+      selectedFilm,
+      searchMovies: onSearch,
+      getMovie: onGetFilm,
+      orderFilter: onOrder,
+      unselectFilm: onUnselect
+    } = this.props;
 
     return (
       <div className="wrapper">
-        <Header defaultStatus={!!selectedFilm} clickHandler={this.setDefaultState}>
+        <Header defaultStatus={!!selectedFilm} clickHandler={onUnselect}>
           {selectedFilm !== null ?
             <FilmCard film={ selectedFilm }/> :
-            <Search clickHandler={this.searchHandler} id="main-search"/>
+            <Search clickHandler={onSearch} id="main-search"/>
           }
         </Header>
-        <div className={`panel flex ${videoList.length > 0 ? '' : ' panel--empty'}`}>
-          {videoList.length > 0 ?
+        <div className={`panel flex ${moviesList.length > 0 ? '' : ' panel--empty'}`}>
+          {moviesList.length > 0 ?
             <Fragment>
               <Label text={`${totalMovies} movies founded`} />
-              <Filter label="Sort by" filters={orderFilters}/>
+              <Filter label="Sort by" filters={orderFilters} selectFilter={onOrder}/>
             </Fragment>
             : ''
           }
         </div>
         <main className="main">
-          {videoList.length > 0
-            ? <VideoList videoList={videoList} chooseFilm={this.chooseFilm}/>
+          {moviesList.length > 0
+            ? <VideoList videoList={moviesList} chooseFilm={onGetFilm}/>
             : <NotFound />
           }
         </main>
@@ -101,4 +75,12 @@ class App extends Component {
   }
 }
 
-export default hot(module)(App);
+const mapStateToProps = state => state.films;
+const mapDispatchToProps = (dispatch) => {
+  const actions = bindActionCreators({
+    searchMovies, orderFilter, getMovie, unselectFilm
+  }, dispatch);
+  return { ...actions };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(hot(module)(App));
