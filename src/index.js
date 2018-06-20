@@ -1,16 +1,18 @@
-import { render } from 'react-dom';
+import { hydrate } from 'react-dom';
 import React from 'react';
 import BrowserRouter from 'react-router-dom/BrowserRouter';
 import { Provider } from 'react-redux';
 import Error from './components/Error';
 import App from './components/App';
-import configureStore from './redux/configureStore';
+import configStore from './redux/configureStore';
 
 
 const initialState = window.REDUX_INITIAL_STATE || {};
-const store = configureStore(initialState);
+window.REDUX_INITIAL_STATE = null;
 
-render(
+const store = configStore(initialState);
+
+hydrate(
   <Error>
     <Provider store={store}>
       <BrowserRouter>

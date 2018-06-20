@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
-import configureStore from '../redux/configureStore';
+import configStore from '../redux/configureStore';
 import Button from '../components/Button';
 import Search from '../components/Search';
 
 
 const initialState = window.REDUX_INITIAL_STATE || {};
-const store = configureStore(initialState);
+const store = configStore(initialState);
 
 describe('<Search />', () => {
   const Props = {

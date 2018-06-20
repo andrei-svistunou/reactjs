@@ -6,7 +6,7 @@
   "scripts": {
     "start:server": "nodemon server.js",
     "start:dev": "concurrently --kill-others \"npm run start:server\" \"npm run start:dev-server\"",
-    "start:dev-server": "./node_modules/.bin/webpack-dev-server --open --color --config ./webpack.config.dev.babel.js",
+    "start:dev-server": "./node_modules/.bin/webpack-dev-server --color --config ./webpack.config.dev.babel.js",
     "start:prod": " npm run start:prod-front &&npm run start:server",
     "start:prod-front": "./node_modules/.bin/webpack --color --config ./webpack.config.prod.babel.js",
     "test": "jest",

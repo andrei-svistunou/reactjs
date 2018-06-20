@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import Footer from '../Footer';
 import Header from '../Header';
@@ -69,9 +68,9 @@ class App extends Component {
                 }
               </main>
             </Fragment> } />
-            <Route exact path='/film/:id' render={() => <Fragment>
+            <Route exact path='/film/:id' render={(props) => <Fragment>
               <Header defaultStatus={!!selectedFilm} clickHandler={onUnselect}>
-                <FilmCard film={ selectedFilm } />
+                <FilmCard film={ selectedFilm } {...props}/>
               </Header>
               <div className={`panel flex ${moviesList.length > 0 ? '' : ' panel--empty'}`}>
                 {moviesList.length > 0 ?
@@ -110,8 +109,16 @@ class App extends Component {
               </main>
             </Fragment>
           } />
-            <Route render={() => <NotFound text='...404...Not found...' />} />
-        </Switch>
+            <Route render={() => 
+              <Fragment>
+                <Header defaultStatus={!!selectedFilm} clickHandler={onUnselect}>
+                  <Search clickHandler={onSearch} id="main-search" />
+                </Header>
+              <main className="main">
+                <NotFound text='...404...Not found...' />
+              </main>
+            </Fragment> } />
+          </Switch>
         <Footer>
           <Logo/>
         </Footer>
