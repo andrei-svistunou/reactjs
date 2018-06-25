@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Button from '../Button';
@@ -47,11 +48,13 @@ class Search extends Component {
           onChange={this.onChangeInput}/>
         <div className="flex">
           <Filter label="Search by" selectFilter={searchFilter} filters={searchingFilters}/>
-          <Button value="Search" classes="btn-primary upper main-search"
-            onClick={() => this.props.clickHandler({
-              searchBy: searchingFilters.find(filter => filter.active).name,
-              search: searchFieldValue
-            })}/>
+          <Link to={`/search/Search ${searchFieldValue}`}>
+            <Button value="Search" classes="btn-primary upper main-search"
+              onClick={() => this.props.clickHandler({
+                searchBy: searchingFilters.find(filter => filter.active).name,
+                search: searchFieldValue
+              })}/>
+          </Link>
         </div>
       </form>
     );

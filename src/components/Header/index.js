@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import SubHeader from '../SubHeader';
 import Button from '../Button';
 import './index.css';
@@ -8,7 +9,9 @@ const Header = props => (
   <header className='main-header'>
     <div>
       <SubHeader>
-        <Button classes={`btn-invert ${!props.defaultStatus ? 'hide' : ''}`} value='Search' onClick={props.clickHandler}/>
+        <Link to='/'>
+          <Button classes={`btn-invert ${!props.defaultStatus ? 'hide' : ''}`} value='Search' onClick={props.clickHandler}/>
+        </Link>
       </SubHeader>
     </div>
     <div>

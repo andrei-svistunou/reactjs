@@ -46,9 +46,6 @@ const config = merge(commonConfig, {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    // new webpack.DefinePlugin({
-    //   'process.env.NODE_ENV': '"development"'
-    // })
   ],
   devServer: {
     historyApiFallback: true,

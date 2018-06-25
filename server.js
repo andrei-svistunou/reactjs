@@ -1,11 +1,4 @@
-const express = require('express');
-const cors = require('cors');
-
-const app = express();
-const PORT = 3003;
-
-app.use(cors());
-
-app.get('/', (req, res) => res.json({ msg: 'Express sends message!' }));
-
-app.listen(PORT, () => console.log('Example app listening on port 3003!'));
+require('babel-core/register');
+['.css', '.scss', '.sass', '.ttf', '.woff', '.woff2'].forEach((ext) => require.extensions[ext] = () => { });
+require('babel-polyfill');
+require('./backend/server.js');
