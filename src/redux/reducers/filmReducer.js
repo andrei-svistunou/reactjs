@@ -1,3 +1,4 @@
+import { List } from 'immutable';
 import { SEARCH_MOVIE, SET_SEARCH_FILTER, ORDER_FILTER, SELECT_FILM, UNSELECT_FILM } from '../actions/types';
 import * as filterMethods from '../helpers/filterMethods';
 
@@ -15,6 +16,7 @@ const initialState = {
     }
   ],
   moviesList: [],
+  // moviesList: List(),
   limit: null,
   offset: null,
   total: null,
@@ -30,6 +32,7 @@ export default (state = initialState, action) => {
         offset: action.movies.offset,
         total: action.movies.total,
         moviesList: action.movies.data,
+        // moviesList: List(action.movies.data),
         orderFilters: initialState.orderFilters
       };
     case SET_SEARCH_FILTER:
@@ -45,6 +48,8 @@ export default (state = initialState, action) => {
     case ORDER_FILTER:
       return {
         ...state,
+        // moviesList: List(Array.from(state.moviesList)
+        //   .sort(filterMethods[action.filter.sortingFilter])),
         moviesList: Array.from(state.moviesList)
           .sort(filterMethods[action.filter.sortingFilter]),
         orderFilters: state.orderFilters.map((item) => {
