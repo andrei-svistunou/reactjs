@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should render <Search /> 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Search)
+    clickHandler={[MockFunction]}
+    id="id"
+  >
+    <Search
+      clickHandler={[MockFunction]}
+      id="id"
+      limit={null}
+      moviesList={Array []}
+      offset={null}
+      orderFilters={
+        Array [
+          Object {
+            "active": false,
+            "name": "release_date",
+            "sortingFilter": "byDate",
+            "value": "release date",
+          },
+          Object {
+            "active": false,
+            "name": "rating",
+            "sortingFilter": "byVote",
+            "value": "rating",
+          },
+        ]
+      }
+      searchFilter={[Function]}
+      searchingFilters={
+        Array [
+          Object {
+            "active": true,
+            "name": "title",
+            "value": "title",
+          },
+          Object {
+            "active": false,
+            "name": "genres",
+            "value": "genre",
+          },
+        ]
+      }
+      selectedFilm={null}
+      total={null}
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <label
+          className="search__label upper-text"
+          htmlFor="id"
+        >
+          Find your movie
+        </label>
+        <input
+          className="search__field"
+          id="id"
+          onChange={[Function]}
+          placeholder="Enter film or author"
+          type="text"
+          value=""
+        />
+        <div
+          className="flex"
+        >
+          <Connect(Filter)
+            filters={
+              Array [
+                Object {
+                  "active": true,
+                  "name": "title",
+                  "value": "title",
+                },
+                Object {
+                  "active": false,
+                  "name": "genres",
+                  "value": "genre",
+                },
+              ]
+            }
+            label="Search by"
+            selectFilter={[Function]}
+          >
+            <Filter
+              dispatch={[Function]}
+              filters={
+                Array [
+                  Object {
+                    "active": true,
+                    "name": "title",
+                    "value": "title",
+                  },
+                  Object {
+                    "active": false,
+                    "name": "genres",
+                    "value": "genre",
+                  },
+                ]
+              }
+              label="Search by"
+              limit={null}
+              moviesList={Array []}
+              offset={null}
+              orderFilters={
+                Array [
+                  Object {
+                    "active": false,
+                    "name": "release_date",
+                    "sortingFilter": "byDate",
+                    "value": "release date",
+                  },
+                  Object {
+                    "active": false,
+                    "name": "rating",
+                    "sortingFilter": "byVote",
+                    "value": "rating",
+                  },
+                ]
+              }
+              searchingFilters={
+                Array [
+                  Object {
+                    "active": true,
+                    "name": "title",
+                    "value": "title",
+                  },
+                  Object {
+                    "active": false,
+                    "name": "genres",
+                    "value": "genre",
+                  },
+                ]
+              }
+              selectFilter={[Function]}
+              selectedFilm={null}
+              total={null}
+            >
+              <div>
+                <span
+                  className="filter__label upper-text "
+                >
+                  Search by
+                </span>
+                <Button
+                  classes="btn--small btn-primary left-space-10"
+                  key="title"
+                  onClick={[Function]}
+                  value="title"
+                >
+                  <input
+                    className="btn btn--small btn-primary left-space-10 upper-text"
+                    onClick={[Function]}
+                    type="button"
+                    value="title"
+                  />
+                </Button>
+                <Button
+                  classes="btn--small btn--secondary left-space-10"
+                  key="genre"
+                  onClick={[Function]}
+                  value="genre"
+                >
+                  <input
+                    className="btn btn--small btn--secondary left-space-10 upper-text"
+                    onClick={[Function]}
+                    type="button"
+                    value="genre"
+                  />
+                </Button>
+              </div>
+            </Filter>
+          </Connect(Filter)>
+          <Button
+            classes="btn-primary upper main-search"
+            onClick={[Function]}
+            value="Search"
+          >
+            <input
+              className="btn btn-primary upper main-search upper-text"
+              onClick={[Function]}
+              type="button"
+              value="Search"
+            />
+          </Button>
+        </div>
+      </form>
+    </Search>
+  </Connect(Search)>
+</Provider>
+`;
